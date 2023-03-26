@@ -1,0 +1,10 @@
+Package: aj412ts
+Type: Package
+Title: Time series analysis
+Version: 0.0.3
+Author: Sangseok Bae
+Maintainer: The package maintainer <ssb9018@ajou.ac.kr>
+Description: TSA for me
+License: GPA
+Encoding: UTF-8
+LazyData: true
