@@ -74,16 +74,3 @@ plot.varfevd  <-function (x, plot.type = c("multiple", "single"), names = NULL,
 #    on.exit(par(op))
 }
 
-
-## 사용법 -----------------------------------------------------------------------------
-library(vars)
-data(Canada)
-colnames(Canada) <-c("name1","name2","name3","name4")
-var <- VAR(Canada , p=4 , type = "both")
-
-
-Using a wide plot window (using win.graph) and using layout (to get the placement of your eight plots), you can get all charts displayed properly. I also changed the colors of the plots as requested. Finally, we are now using single plots as there are no calls to par() which do not sit well with layout().
-
-win.graph(width=15,height=8)
-layout(matrix(1:8,ncol=2))
-plot.varfevd(fevd(Re.var, n.ahead = 48 ),plot.type = "single", col=1:8)

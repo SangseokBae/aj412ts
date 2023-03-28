@@ -8,5 +8,12 @@ plot.varfevd()
 Plotting VAR FEVD
 }
 \examples{
-plot.varfevd()
+
+# 변수가 8개이면 col=1:8로 지정함
+tmp <- fevd(var, n.ahead = 48 )
+plot.varfevd( tmp  , plot.type = "single", col=1:8)
+
+# 각 변수별 설명 비율을 확인
+Re.FEVD_percentage <- tmp$VariableName *100 
+
 }
