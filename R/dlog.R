@@ -5,4 +5,5 @@
 
 dlog<-function(x){
   logx<-log(x)
-  dlogx<-diff(logx) }
+  c(NA, (logx[-1]-logx[-length(x)]))
+}
