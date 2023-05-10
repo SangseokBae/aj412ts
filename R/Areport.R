@@ -1,6 +1,6 @@
 # reporting Arima result
 
-Areport<-function(Rresult){
+Areport<-function(Re2){
 
 
 df_value<-Re2$nobs-length(Re2$coef)
