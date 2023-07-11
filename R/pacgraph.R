@@ -14,4 +14,5 @@ pacgraph=function(x, lags=15){
   abline(h=2/sqrt(n), lty=3, col='black')
   abline(h=-2/sqrt(n), lty=3, col='black')
   print(b)
-  return(b) }
+  return(b)
+  }

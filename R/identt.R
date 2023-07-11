@@ -11,5 +11,7 @@ identt<-function(xdatas, lagx=15){
  cat('PACF values frome First period ----', '\n')
  cat('---------------------------------------', '\n')
  pacgraph(xdatas, lagx) 
+ par(mfrow=c(1,1))
+ 
  }
 
