@@ -4,6 +4,18 @@
 #' 
 
 dlog<-function(x){
+  
+if (base::missing(x)) {
+	 return(cat("  if class(x)='ts', dlog(x)=ts , else dlog(x)=c(NA, ...) "))}
+	 
+  
+  if(class(x)=="ts") {
+  tmp_ts<-diff(log(x))
+  return(tmp_ts)
+  }
+  
+  
+  else{  
   tmp_k<-0
   
   for(i in 1:length(x)){
@@ -26,4 +38,4 @@ dlog<-function(x){
   return( c(NA, (logx[-1]-logx[-length(x)])) )
   }
 
-}
+} }
