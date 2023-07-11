@@ -1,12 +1,12 @@
 # reporting Arima result
 
-Areport<-function(Re2){
+Areport<-function(Re2XX){
 
 
-df_value<-Re2$nobs-length(Re2$coef)
+df_value<-Re2$nobs-length(Re2XX$coef)
 
-coeffs<-Re2$coef
-se_coeffs<-(sqrt(diag(Re2$var.coef)))
+coeffs<-Re2XX$coef
+se_coeffs<-(sqrt(diag(Re2XX$var.coef)))
 
 m<-length(coeffs)
 n<-length(se_coeffs)
@@ -29,10 +29,10 @@ t_value<-as.data.frame(t_value)
 p_value<-as.data.frame(p_value)
 temp<-cbind(coeffs, t_value, p_value)
 
-cat('Number of Data: ',Re2$nobs,'\n')
-cat('Number of Coefficients: ', length(Re2$coef),'\n')
+cat('Number of Data: ',Re2XX$nobs,'\n')
+cat('Number of Coefficients: ', length(Re2XX$coef),'\n')
 cat('Degree of freedom: ', df_value, '\n')
-cat('AIC: ', Re2$aic, '\n')
+cat('AIC: ', Re2XX$aic, '\n')
 cat(' ', '\n')
 temp<-round(temp,4)
 print(temp)
