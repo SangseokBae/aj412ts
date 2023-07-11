@@ -9,6 +9,7 @@ max_ccf=function(s_x, s_y){
 	    cat("  max_ccf(x, y))", '\n')
 		return(cat("  cor: correlation / lag: -4, x가 y보다 4일 뒤쳐져 있다 "))  }
 
+  options(digits=3)
   s_d<-ccf(s_x,s_y, plot=F)
   cor=s_d$acf[,,1]
   lag=s_d$lag[,,1]
