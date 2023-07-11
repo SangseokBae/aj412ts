@@ -8,3 +8,5 @@ Description: TSA for me
 License: GPA
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 2.10)
