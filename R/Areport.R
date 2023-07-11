@@ -3,7 +3,7 @@
 Areport<-function(Re2XX){
 
 
-df_value<-Re2$nobs-length(Re2XX$coef)
+df_value<-Re2XX$nobs-length(Re2XX$coef)
 
 coeffs<-Re2XX$coef
 se_coeffs<-(sqrt(diag(Re2XX$var.coef)))
